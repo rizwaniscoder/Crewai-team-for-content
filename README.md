@@ -1,51 +1,75 @@
-# Turtles Crew-AI
+# Automated Jewellery 3D Model Generator
 
-Turtles Crew-AI is a Streamlit-based web application for managing AI-driven teams to perform various tasks like researching, writing blogs, and managing social media content.
+This Streamlit application enables users to generate 3D models of jewellery designs automatically. It utilizes OpenAI's language models for generating image prompts and DALL·E 3 for image generation. Additionally, it integrates with the CSM API for 3D model generation.
 
 ## Features
 
-- **Research and Blog Team:** Allows users to input search terms, website URLs, task descriptions for researchers and blog writers, and run the Crew 1 team.
-- **Social Media Team:** Allows users to input blog content and run the Crew 2 team to generate social media posts.
-- **Authentication:** Users can log in using a username and password to access the application.
+- **Jewellery Image Prompt Generation**: Generate prompts for jewellery design images.
+- **DALL·E 3 Image Generation**: Generate jewellery design images using DALL·E 3 based on the provided prompts.
+- **3D Model Generation with CSM**: Generate 3D models of jewellery designs using the CSM API.
+- **Customization**: Customize prompts for image generation.
+
+## Prerequisites
+
+Before running the application, make sure you have the following:
+
+- Python installed on your machine
+- Streamlit library
+- OpenAI API key
+- CSM API key (for 3D model generation)
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/your_username/turtles-crew-aiNavigate to the project directory:
+    ```bash
+    git clone https://github.com/rizwaniscoder/automated-jewellery-3d-model-generator.git
+    ```
 
-bash
-Copy code
-cd turtles-crew-ai
-Install dependencies:
+2. **Navigate to the project directory:**
 
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-Set up environment variables by creating a .env file in the project directory and adding the following:
+    ```bash
+    cd automated-jewellery-3d-model-generator
+    ```
 
-plaintext
-Copy code
-YOUR_APP_USERNAME=your_username
-YOUR_APP_PASSWORD=your_password
-Run the application:
+3. **Install dependencies:**
 
-bash
-Copy code
-streamlit run main.py
-Open your web browser and go to http://localhost:8501 to access the application.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you find any bugs or have suggestions for improvements.
+## Usage
 
-License
-This project is licensed under the MIT License.
+1. **Run the application:**
 
-typescript
-Copy code
+    ```bash
+    streamlit run main.py
+    ```
 
-Make sure to replace placeholders like `your_username` and `your_password`
+2. **Access the application:**
 
+    Open your web browser and go to `http://localhost:8501`.
 
+3. **Provide API keys:**
+
+    - Enter your OpenAI API key and CSM API key in the provided text inputs.
+
+4. **Generate Jewellery Image Prompt:**
+
+    - Enter your prompt and select styles for the jewellery design.
+
+5. **Generate DALL·E 3 Image:**
+
+    - Click the "Generate Image" button to generate the jewellery design image based on the provided prompt.
+
+6. **Generate 3D Model with CSM:**
+
+    - Enter the image URL for 3D model generation and click the "Generate 3D Model" button.
+
+7. **Check 3D Model Status:**
+
+    - The application will check the status of 3D model generation and display the result once completed.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
