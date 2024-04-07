@@ -4,7 +4,7 @@ from crewai import Crew, Agent, Task
 from dotenv import load_dotenv
 from crewai_tools import SeleniumScrapingTool, ScrapeWebsiteTool
 from langchain_openai import ChatOpenAI
-from tools.search_tools import SearchTools
+from search_tools import SearchTools
 
 load_dotenv()
 
