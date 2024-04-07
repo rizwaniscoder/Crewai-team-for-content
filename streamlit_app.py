@@ -11,12 +11,7 @@ import time
 
 load_dotenv()
 
-# Define the correct username and password
-CORRECT_USERNAME = os.getenv("YOUR_APP_USERNAME")
-CORRECT_PASSWORD = os.getenv("YOUR_APP_PASSWORD")
 
-def authenticate(username, password):
-    return username == CORRECT_USERNAME and password == CORRECT_PASSWORD
 
 class Crew1:
     def __init__(self):
@@ -107,25 +102,7 @@ class Crew2:
 def main():
     st.title("Turtles Crew-AI")
 
-    # Check if the user is logged in
-    if "logged_in" not in st.session_state:
-        st.session_state.logged_in = False
 
-    if not st.session_state.logged_in:
-        # Ask for username and password
-        username = st.sidebar.text_input("Username")
-        password = st.sidebar.text_input("Password", type="password")
-
-        if st.sidebar.button("Login"):
-            if authenticate(username, password):
-                st.session_state.logged_in = True
-            else:
-                st.error("Incorrect username or password. Please try again.")
-                return
-
-    # If not logged in, return early to prevent displaying the app
-    if not st.session_state.logged_in:
-        return
 
     st.sidebar.title("Research and Blog Team")
     search_terms = st.sidebar.text_input("Search Terms")
